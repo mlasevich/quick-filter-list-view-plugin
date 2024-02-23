@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Provides a List View with a quick, Browser-side filter
+</div>

@@ -1,0 +1,17 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+
+    <st:adjunct includes="io.jenkins.plugins.jquery3"/>
+    <!-- Search box -->
+    <br/>
+    <div id="livesearchablelist">
+        <!-- Display the job list -->
+        <st:include page="itemsTable.jelly"/>
+    </div>
+    <script src="${rootURL}/plugin/quick-filter-list-view/js/filter-list.js"
+            type="text/javascript"/>
+
+    <!--HACK: Clean cache after the request completion-->
+    <!--<j:set var="sessionId" value="${it.cleanCache()}"/>-->
+</j:jelly>
